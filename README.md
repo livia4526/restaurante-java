@@ -1,4 +1,4 @@
-🍔 Sistema de Restaurante 
+# 🍔 Sistema de Restaurante 
 
 Sistema desktop de gerenciamento de restaurante/lanchonete desenvolvido em **Java** com interface gráfica **Swing**.
 
