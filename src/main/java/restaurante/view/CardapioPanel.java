@@ -1,27 +1,8 @@
 /*
- * ARQUIVO: CardapioPanel.java                PACOTE: restaurante.view
- * RESPONSÁVEL:
+ * ARQUIVO: MenuView.java                     PACOTE: restaurante.view
  *
- * RESPONSABILIDADE:
- * Tela de CADASTRO e LISTAGEM do cardápio.
- *
- * IMPLEMENTAÇÃO:
- * - Construtor CardapioPanel(GerenciadorRestaurante g).
- * - Formulário: JComboBox tipo (Bebida/Prato/Sobremesa), JTextField nome,
- *   JTextField preço, e o campo específico, que muda com o tipo:
- *   JCheckBox "Com gelo" / JComboBox<TamanhoPrato> / JCheckBox "Especial".
- * - Botão "Cadastrar": ler os campos, criar o objeto certo com
- *   g.proximoCodigoItem() e chamar g.cadastrarItem(item).
- * - JTable com código, nome, categoria e preço final (calcularPreco()),
- *   mais um JComboBox de filtro ("Todos"/categorias) usando g.listarPorCategoria().
- * - public void atualizar(): recarrega a tabela.
- * - Erros (NumberFormatException, IllegalArgumentException):
- *   JOptionPane.showMessageDialog com mensagem amigável.
- *
- * OBSERVAÇÕES:
- * - Não calcular preço nem gerar código aqui: usar o model/gerenciador.
- *
- * DEPENDE DE: GerenciadorRestaurante, Bebida, Prato, Sobremesa, TamanhoPrato.
+ * RESERVADO PARA A UNIDADE 2 (interface gráfica em Swing).
+ * Nesta unidade a interface é o MenuConsole. Não implementar ainda.
  */
 package restaurante.view;
 
