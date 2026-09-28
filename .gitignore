@@ -22,3 +22,20 @@
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 replay_pid*
+
+# --- Adicionado pelo grupo ---
+# Saída de compilação (Maven e javac manual)
+target/
+bin/
+
+# Dados locais gerados pelo programa — cada um tem os seus, NÃO versionar
+dados/
+
+# IDEs
+.idea/
+*.iml
+.vscode/
+.classpath
+.project
+.settings/
+nbproject/
