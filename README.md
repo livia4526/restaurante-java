@@ -13,7 +13,7 @@ Projeto avaliativo da disciplina de Laboratório de Programação — Ciência d
 | 1 | Alice Santos | `Main.java` · `model/ItemCardapio.java` · `model/Bebida.java` |
 | 2 | Larissa Castro | `model/Prato.java` · `model/Sobremesa.java` · `model/Mesa.java` |
 | 3 | Lívia Rodrigues | `model/Pedido.java` · `model/ItemPedido.java` · `service/GerenciadorRestaurante.java` |
-| 4 | .... | `service/Relatorio.java` · `service/Persistencia.java` · `view/MenuView.java` |
+| 4 | Pedro Afonso | `service/Relatorio.java` · `service/Persistencia.java` · `view/MenuView.java` |
 
 ---
 
