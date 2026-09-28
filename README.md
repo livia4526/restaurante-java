@@ -47,30 +47,47 @@ Os dados são persistidos em um arquivo `.txt` local, sem dependência de banco 
 
 ```
 restaurante-java/
-├── src/
-│   ├── main/
-│   │   └── Main.java                    # Ponto de entrada
-│   ├── model/
-│   │   ├── ItemCardapio.java            # Classe abstrata base
-│   │   ├── Bebida.java                  # Herda de ItemCardapio
-│   │   ├── Prato.java                   # Herda de ItemCardapio
-│   │   ├── Sobremesa.java               # Herda de ItemCardapio
-│   │   ├── ItemPedido.java              # Item + quantidade
-│   │   ├── Pedido.java                  # Contém vários ItemPedido (composição)
-│   │   └── Mesa.java                    # Mesa com um Pedido
-│   ├── service/
-│   │   ├── GerenciadorRestaurante.java  # Lógica central
-│   │   ├── Relatorio.java               # Relatórios do dia
-│   │   └── Persistencia.java            # Salvar/carregar em .txt
-│   ├── view/
-│   │   └── MenuView.java                # Interface com o usuário
-│   └── exception/
-│       ├── ItemNaoEncontradoException.java
-│       ├── MesaOcupadaException.java
-│       └── MesaVaziaException.java
-├── dados/
-│   └── dados.txt                        # Arquivo de persistência
-└── README.md
+├── pom.xml
+├── README.md
+├── LICENSE
+├── .gitignore
+└── src/
+    ├── main/
+    │   └── java/
+    │       └── restaurante/
+    │           ├── Main.java
+    │           ├── model/
+    │           │   ├── ItemCardapio.java
+    │           │   ├── Bebida.java
+    │           │   ├── Prato.java
+    │           │   ├── TamanhoPrato.java
+    │           │   ├── Sobremesa.java
+    │           │   ├── ItemPedido.java
+    │           │   ├── Pedido.java
+    │           │   └── Mesa.java
+    │           ├── service/
+    │           │   ├── GerenciadorRestaurante.java
+    │           │   ├── Relatorio.java
+    │           │   └── Persistencia.java
+    │           ├── view/
+    │           │   ├── MenuView.java
+    │           │   ├── CardapioPanel.java
+    │           │   ├── MesasPanel.java
+    │           │   └── RelatorioPanel.java
+    │           └── exception/
+    │               ├── ItemNaoEncontradoException.java
+    │               ├── MesaOcupadaException.java
+    │               └── MesaVaziaException.java
+    └── test/
+        └── java/
+            └── restaurante/
+                ├── model/
+                │   ├── ItemCardapioTest.java
+                │   ├── PedidoTest.java
+                │   └── MesaTest.java
+                └── service/
+                    ├── GerenciadorRestauranteTest.java
+                    └── RelatorioTest.java
 ```
 
 ---
