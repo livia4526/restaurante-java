@@ -1,24 +1,35 @@
-/*
- * ARQUIVO: Prato.java                        PACOTE: restaurante.model
- * RESPONSÁVEL:
- *
- * RESPONSABILIDADE:
- * Item do cardápio do tipo prato, com tamanho. Herda de ItemCardapio.
- *
- * IMPLEMENTAÇÃO:
- * - Atributo: TamanhoPrato tamanho (+ getter). Não aceitar null
- *   (IllegalArgumentException).
- * - Construtor Prato(int codigo, String nome, double precoBase, TamanhoPrato tamanho).
- * - calcularPreco(): precoBase + tamanho.getAdicional().
- * - getCategoria(): return "Prato";
- * - Opcional: toString() com " - Médio" etc.
- *
- * OBSERVAÇÕES:
- * - NÃO escrever 0, 5 ou 10 aqui: os valores ficam só no enum TamanhoPrato.
- *
- * DEPENDE DE: ItemCardapio, TamanhoPrato.
- */
 package restaurante.model;
 
 public class Prato extends ItemCardapio {
+
+    private TamanhoPrato tamanho;
+
+    public Prato(int codigo, String nome, double precoBase, TamanhoPrato tamanho) {
+        super(codigo, nome, precoBase);
+
+        if (tamanho == null) {
+            throw new IllegalArgumentException("O tamanho do prato não pode ser nulo.");
+        }
+
+        this.tamanho = tamanho;
+    }
+
+    public TamanhoPrato getTamanho() {
+        return tamanho;
+    }
+
+    @Override
+    public double calcularPreco() {
+        return getPrecoBase() + tamanho.getAdicional();
+    }
+
+    @Override
+    public String getCategoria() {
+        return "Prato";
+    }
+
+    @Override
+    public String toString() {
+        return super.toString() + " - " + tamanho;
+    }
 }

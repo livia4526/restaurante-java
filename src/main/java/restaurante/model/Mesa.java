@@ -1,29 +1,48 @@
-/*
- * ARQUIVO: Mesa.java                         PACOTE: restaurante.model
- * RESPONSÁVEL:
- *
- * RESPONSABILIDADE:
- * Uma mesa do restaurante e TODOS os pedidos que passaram por ela no dia
- * ("Mesa com vários pedidos"). No máximo UM pedido aberto por vez.
- *
- * IMPLEMENTAÇÃO:
- * - Atributos: int numero (> 0); List<Pedido> pedidos = new ArrayList<>();
- * - boolean isOcupada(): existe pedido com isAberto() == true.
- * - Pedido getPedidoAberto(): o pedido aberto ou null (use stream + filter).
- * - void adicionarPedido(Pedido p): se p estiver aberto e a mesa já estiver
- *   ocupada -> IllegalStateException (proteção extra); senão adiciona.
- * - List<Pedido> getPedidos(): lista somente leitura.
- * - getNumero().
- *
- * OBSERVAÇÕES:
- * - A mesa fica livre sozinha quando o pedido aberto é fechado. Não crie
- *   atributo "ocupada": ele ficaria dessincronizado.
- * - As exceções de negócio (MesaOcupada/MesaVazia) são lançadas pelo
- *   GerenciadorRestaurante, não aqui.
- *
- * DEPENDE DE: Pedido.
- */
 package restaurante.model;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Mesa {
+
+    private int numero;
+
+    private List<Pedido> pedidos = new ArrayList<>();
+
+    public Mesa(int numero) {
+        if (numero <= 0) {
+            throw new IllegalArgumentException("O número da mesa deve ser maior que zero.");
+        }
+        this.numero = numero;
+    }
+
+    public int getNumero() {
+        return numero;
+    }
+
+    public Pedido getPedidoAberto() {
+        for (Pedido p : pedidos) {
+            if (p.isAberto()) {
+                return p;
+            }
+        }
+        return null;
+    }
+    public boolean isOcupada() {
+        return getPedidoAberto() != null;
+    }
+
+    public void adicionarPedido(Pedido p) {
+        if (p == null) {
+            throw new IllegalArgumentException("O pedido não pode ser nulo.");
+        }
+        if (p.isAberto() && isOcupada()) {
+            throw new IllegalStateException("A mesa " + numero + " já possui um pedido aberto.");
+        }
+        pedidos.add(p);
+    }
+
+    public List<Pedido> getPedidos() {
+        return new ArrayList<>(pedidos);
+    }
 }
