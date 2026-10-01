@@ -1,27 +1,37 @@
 /*
  * ARQUIVO: Main.java                         PACOTE: restaurante
- * RESPONSÁVEL: Integrante 1 (Alice)
+ * RESPONSÁVEL: Alice Santos
  *
  * RESPONSABILIDADE:
  * Ponto de entrada. Apenas "monta" o sistema e inicia a interface.
- *
- * IMPLEMENTAÇÃO:
- * - Criar: Persistencia persistencia = new Persistencia("dados/dados.txt");
- * - Criar: GerenciadorRestaurante g = new GerenciadorRestaurante(persistencia);
- *   Esse construtor lança IOException: capturar, mostrar a mensagem com
- *   System.out.println e encerrar (System.exit(1)).
- * - Iniciar a interface de console: new MenuConsole(g).iniciar();
- *
- * OBSERVAÇÕES:
- * - Na Unidade 2, a última linha passa a abrir o MenuView (Swing).
- * - Nada de regra de negócio, leitura de arquivo ou menus aqui.
+ * Nada de regra de negócio, leitura de arquivo ou menus aqui.
  *
  * DEPENDE DE: Persistencia, GerenciadorRestaurante, MenuConsole.
  */
 package restaurante;
 
+import java.io.IOException;
+
+import restaurante.service.GerenciadorRestaurante;
+import restaurante.service.Persistencia;
+import restaurante.view.MenuConsole;
+
 public class Main {
     public static void main(String[] args) {
-        // TODO
+        // Objeto que sabe salvar/ler os dados no arquivo dados/dados.txt
+        Persistencia persistencia = new Persistencia("dados/dados.txt");
+
+        try {
+            // O construtor do gerenciador lê o arquivo, e por isso pode lançar
+            // IOException (exceção VERIFICADA: o compilador obriga o try/catch)
+            GerenciadorRestaurante g = new GerenciadorRestaurante(persistencia);
+
+            // Inicia a interface de console (o menu)
+            new MenuConsole(g).iniciar();
+        } catch (IOException e) {
+            // Se não conseguiu carregar os dados: mostra o erro e encerra o programa
+            System.out.println("Erro ao carregar os dados: " + e.getMessage());
+            System.exit(1); // 1 = terminou com erro (0 seria sucesso)
+        }
     }
 }
