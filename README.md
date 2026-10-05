@@ -12,7 +12,7 @@ Projeto avaliativo da disciplina de Laboratório de Programação — Ciência d
 |---|------|-----------|
 | 1 | Alice Santos | `Main.java` · `service` |
 | 2 | Larissa Castro | `model` |
-| 3 | Lívia Rodrigues | `test` · `exception` |
+| 3 | Lívia Rodrigues | `test` · `service` |
 | 4 | Pedro Afonso | `view` · `exception` |
 
 ---
