@@ -1,6 +1,6 @@
 # 🍔 Sistema de Restaurante 
 
-Sistema desktop de gerenciamento de restaurante/lanchonete desenvolvido em **Java** com interface gráfica **Swing**.
+Sistema desktop de gerenciamento de restaurante/lanchonete desenvolvido em **Java** com interface gráfica **JavaFX**.
 
 Projeto avaliativo da disciplina de Laboratório de Programação — Ciência da Computação, Universidade Tiradentes (UNIT).
 
@@ -10,10 +10,10 @@ Projeto avaliativo da disciplina de Laboratório de Programação — Ciência d
 
 | # | Nome | Módulo(s) |
 |---|------|-----------|
-| 1 | Alice Santos | `Main.java` · `model/ItemCardapio.java` · `model/Bebida.java` |
-| 2 | Larissa Castro | `model/Prato.java` · `model/Sobremesa.java` · `model/Mesa.java` |
-| 3 | Lívia Rodrigues | `model/Pedido.java` · `model/ItemPedido.java` · `service/GerenciadorRestaurante.java` |
-| 4 | Pedro Afonso | `service/Relatorio.java` · `service/Persistencia.java` · `view/MenuView.java` |
+| 1 | Alice Santos | `Main.java` · `service` |
+| 2 | Larissa Castro | `model` |
+| 3 | Lívia Rodrigues | `test` |
+| 4 | Pedro Afonso | `view` · `exception` |
 
 ---
 
@@ -180,7 +180,7 @@ Mesas atendidas: 6
 - O arquivo `dados/dados.txt` é criado automaticamente na primeira execução
 - Os testes não dependem de arquivo em disco — usam objetos criados diretamente em memória
 - O projeto não utiliza bibliotecas externas além do JUnit, tornando a execução simples em qualquer máquina com Java instalado
-- A interface pode ser desenvolvida em Swing (gráfica) ou console, conforme preferência do grupo
+- A interface pode ser desenvolvida em JavaFX (gráfica) ou console
 ```
 
 ---
