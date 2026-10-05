@@ -106,7 +106,7 @@ restaurante-java/
 | **Streams** | Filtros e ordenação em relatórios |
 | **Persistência em arquivo** | `FileWriter` e `BufferedReader` com separador `\|` |
 | **Testes com JUnit** | Cobertura das regras de negócio |
-| **Interface gráfica** | Swing |
+| **Interface gráfica** | JavaFX |
 
 ---
 
