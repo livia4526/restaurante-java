@@ -33,6 +33,7 @@ Os dados são salvos automaticamente em um arquivo `.txt` local, sem dependênci
 - ✅ Cadastro de itens: bebida (com ou sem gelo), prato (pequeno, médio ou grande) e sobremesa (com adicionais)
 - ✅ Listagem do cardápio, com filtro por categoria
 - ✅ Remoção de itens do cardápio (o item é desativado, sem afetar pedidos já registrados)
+- ✅ Bloqueio de itens repetidos no cardápio
 
 **Atendimento**
 - ✅ Abertura de mesa com número e nome do cliente
@@ -159,24 +160,25 @@ restaurante-java/
    | Morango | R$ 2,50 |
    | Granulado | R$ 1,50 |
 
-5. Um item **removido do cardápio** é desativado: deixa de aparecer na listagem e não pode mais ser pedido, mas continua nos pedidos já registrados e no relatório
+5. Não é possível cadastrar um **item repetido**: mesmo tipo, mesmo nome (sem diferenciar maiúsculas e minúsculas) e mesma opção (gelo, tamanho ou adicionais). Itens removidos do cardápio não contam
+6. Um item **removido do cardápio** é desativado: deixa de aparecer na listagem e não pode mais ser pedido, mas continua nos pedidos já registrados e no relatório
 
 **Pedido e conta**
-6. Um **pedido** pode ter vários itens, cada um com sua quantidade; pedir de novo um item que já está no pedido soma a quantidade
-7. Ao **remover um item do pedido**, é possível tirar só parte da quantidade; se a quantidade chegar a zero, o item sai do pedido
-8. **Subtotal** = soma de (preço do item × quantidade)
-9. **Taxa de serviço** = 10% do subtotal
-10. **Total** = subtotal + taxa de serviço
+7. Um **pedido** pode ter vários itens, cada um com sua quantidade; pedir de novo um item que já está no pedido soma a quantidade
+8. Ao **remover um item do pedido**, é possível tirar só parte da quantidade; se a quantidade chegar a zero, o item sai do pedido
+9. **Subtotal** = soma de (preço do item × quantidade)
+10. **Taxa de serviço** = 10% do subtotal
+11. **Total** = subtotal + taxa de serviço
 
 **Mesas**
-11. Uma **mesa** só pode ter um pedido aberto por vez
-12. **Não é possível fechar a conta** de um pedido sem itens
-13. Ao **fechar a conta**, o pedido é arquivado com data e hora e a mesa fica livre para um novo cliente
-14. Uma mesa aberta por engano pode ser **cancelada**: o pedido é descartado e não entra no relatório
+12. Uma **mesa** só pode ter um pedido aberto por vez
+13. **Não é possível fechar a conta** de um pedido sem itens
+14. Ao **fechar a conta**, o pedido é arquivado com data e hora e a mesa fica livre para um novo cliente
+15. Uma mesa aberta por engano pode ser **cancelada**: o pedido é descartado e não entra no relatório
 
 **Relatório**
-15. O relatório considera apenas as contas **fechadas no dia escolhido**
-16. **Mesas atendidas** = número de contas fechadas no dia (uma mesma mesa pode ser contada mais de uma vez se atendeu clientes diferentes)
+16. O relatório considera apenas as contas **fechadas no dia escolhido**
+17. **Mesas atendidas** = número de contas fechadas no dia (uma mesma mesa pode ser contada mais de uma vez se atendeu clientes diferentes)
 
 ---
 
