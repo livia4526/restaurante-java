@@ -2,7 +2,6 @@
 
 Sistema desktop de gerenciamento de restaurante/lanchonete desenvolvido em **Java** com interface gráfica **JavaFX**.
 
-Projeto avaliativo da disciplina de Projeto de Programação em Java — Ciência da Computação, Universidade Tiradentes (UNIT).
 
 ---
 
