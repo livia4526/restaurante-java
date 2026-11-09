@@ -1,22 +1,3 @@
-/*
- * ARQUIVO: Persistencia.java                 PACOTE: restaurante.service
- * RESPONSÁVEL: Alice Santos
- *
- * RESPONSABILIDADE:
- * Salvar e carregar cardápio e pedidos em um arquivo .txt (separador '|').
- *
- * FORMATO DO ARQUIVO (todos os ITEM primeiro, depois os PEDIDOs):
- *   ITEM|BEBIDA|1|Coca-Cola|6.0|true
- *   ITEM|PRATO|2|Hambúrguer Clássico|25.0|MEDIO
- *   ITEM|SOBREMESA|3|Pudim|8.0|false
- *   PEDIDO|1|5|Maria|FECHADO|2026-09-28T13:45:10
- *   ITEMPEDIDO|1|2|3          (numeroPedido|codigoItem|quantidade)
- *   PEDIDO|2|7|João|ABERTO|
- *
- * OBSERVAÇÕES:
- * - Nenhuma regra de negócio aqui: só ler e gravar.
- * - Linhas inválidas são ignoradas e avisadas em System.err (o programa não cai).
- */
 package restaurante.service;
 
 import java.io.BufferedReader;

@@ -1,14 +1,3 @@
-/*
- * ARQUIVO: Relatorio.java                    PACOTE: restaurante.service
- * RESPONSÁVEL: Alice Santos
- *
- * RESPONSABILIDADE:
- * Calcular e formatar o RELATÓRIO DO DIA a partir dos pedidos fechados.
- *
- * OBSERVAÇÕES:
- * - A data vem por parâmetro (não usamos LocalDate.now() aqui), assim dá para testar.
- * - Não lê arquivo nem acessa o Gerenciador: só recebe a lista de pedidos.
- */
 package restaurante.service;
 
 import java.time.LocalDate;

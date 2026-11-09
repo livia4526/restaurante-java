@@ -1,11 +1,3 @@
-/*
- * ARQUIVO: ItemCardapio.java                 PACOTE: restaurante.model
- * RESPONSÁVEL: Alice Santos
- *
- * RESPONSABILIDADE:
- * Classe ABSTRATA base de todo item do cardápio (HERANÇA + ABSTRAÇÃO).
- * Bebida, Prato e Sobremesa herdam desta classe.
- */
 package restaurante.model;
 
 import java.util.Locale;
