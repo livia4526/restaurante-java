@@ -1,13 +1,3 @@
-/*
- * ARQUIVO: Bebida.java                       PACOTE: restaurante.model
- * RESPONSÁVEL: Alice Santos
- *
- * RESPONSABILIDADE:
- * Item do cardápio do tipo bebida. Herda de ItemCardapio.
- *
- * OBSERVAÇÃO:
- * "Coca-Cola com gelo" e "Coca-Cola sem gelo" são DOIS itens cadastrados.
- */
 package restaurante.model;
 
 // HERANÇA: Bebida "é um" ItemCardapio, então já ganha código, nome e precoBase
